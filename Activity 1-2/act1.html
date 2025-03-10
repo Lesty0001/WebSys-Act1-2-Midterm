@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+    <title>getElementByClassName</title>
+</head>
+<body>
+    <div class="product-item"> 
+        <h2 id="product-title-1">Awesome Gadget</h2> 
+        <p class="product-description1">A revolutionary device for everyday use.</p> 
+        <span class="price">Price: P49.99</span> 
+        <button onclick="changeClass()" class="add-to-cart-btn" id="add-btn-1">Add to Cart</button> </div> 
+     
+    <div class="product-item featured"> 
+        <h2 id="product-title-2">Deluxe Widget</h2> 
+        <p class="product-description">Experience the ultimate in widget technology.</p> 
+        <span class="price discounted">Price: P99.99</span> 
+        <button onclick="changeID()" class="add-to-cart-btn" id="add-btn-2">Add to Cart</button> </div> 
+     
+    <div class="product-item"> 
+        <h2 id="product-title-3">Basic Thingamajig</h2> 
+        <p class="product-description2">A simple solution to a complex problem.</p> 
+        <span class="price">Price: P19.99</span> 
+        <button onclick="changeClass1()" class="add-to-cart-btn" id="add-btn-3">Add to Cart</button> </div> 
+    
+            <script>
+                function changeID() {
+                    document.getElementById("product-title-2").innerText = "Featured: Deluxe Widget - Limited Edition";
+                }
+
+                function changeClass() {
+                    let prodDescription1 = document.getElementsByClassName("product-description1");
+                    for (let i = 0; i < prodDescription1.length; i++) {
+                        prodDescription1[i].innerText = "A revolutionary device for everyday use. Special Offer! Buy 1 Get 1 Free!";
+                    }   
+                }
+                function changeClass1() {
+                    let prodDescription2 = document.getElementsByClassName("product-description2");
+                    for (let i = 0; i < prodDescription2.length; i++) {
+                        prodDescription2[i].innerText = "A simple solution to a complex problem.Special Offer! Buy 1 Get 1 ME!";
+                    }   
+                }
+            </script>
+        
+</body>
+<script src="main.js"></script>
+</html
