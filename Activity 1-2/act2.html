@@ -40,7 +40,7 @@
     </div> 
  
     <button id="highlight-important">Highlight Important Text</button>
-    <button onclick="changeTitle();paragraphCount();comAuthor();highlightText();">Update the Contents</button>
+    <button onclick="changeTitle();paragraphCount();comAuthor();highlightText();highlightImportant();">Update the Contents</button>
     <script> 
     let a = ""
         function changeTitle() { 
@@ -62,9 +62,16 @@
         }
 
         function highlightText(){
-            let items = document.querySelector('li .important');
-            items.forEach(item => item.style.color = 'blue');
+            let items = document.querySelector('#tags .important');
+            items.textContent += "(Featured)" ;
         };
+
+        function highlightImportant() {
+            let items = document.querySelectorAll('.important');
+            items.forEach(item => {
+                item.style.color = 'blue';
+            });
+        }
         // Your JavaScript code will go here 
     </script> 
 </body> 
